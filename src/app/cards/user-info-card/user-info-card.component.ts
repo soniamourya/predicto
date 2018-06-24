@@ -15,8 +15,4 @@ export class UserInfoCardComponent implements OnInit {
   ngOnInit() {
     console.log('hello');
   }
-
-  abc() {
-    console.log('hello');
-  }
 }
