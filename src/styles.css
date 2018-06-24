@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-align: left
+}
+
+body {
+  line-height: 1
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold
+}
+
+del {
+  text-decoration: line-through
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e2e2e2;
+  margin: 15px 0;
+  padding: 0;
+  clear: both
+}
+
+input, select {
+  vertical-align: middle
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+}
+
+body {
+  font: 400 14px/20px 'Roboto', sans-serif;
+  font-style: normal;
+  text-align: left;
+  color: #5F5F5F;
+  min-height: 100vh;
+  background: #F9F9F9
+}
+
+body, body * {
+  -webkit-font-smoothing: antialiased;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+a, a:hover, a:active, a:focus, button, input, select, textarea {
+  outline: none;
+  text-decoration: none
+}
+
+a {
+  color: #558CE3
+}
+
+a:hover {
+  color: #315B9D
+}
+
+p {
+  margin: 0 0 15px
+}
+
+p:last-child {
+  margin-bottom: 0
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=text], input[type=search], input[type=email], button, textarea {
+  font-size: 15px;
+  width: 100%;
+  -webkit-appearance: none
+}
+
+
+@media screen and (max-width: 767px){
+  .pred-container{padding: 90px 10px 0 80px}
+  .pred-card{width: 100%; margin-right: 0}
+}
+
+.pred-container {
+  padding: 90px 120px
+}
+
+.pred-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+
+.pred-card {
+  width: 380px;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin: 0 20px 20px 0
+}
+
+.pred-card-title, .pred-card-footer {
+  display: flex;
+  align-items: center
+}
+
+.pred-card-title h4, .pred-card-footer a {
+  font-weight: 500
+}
+
+.pred-card-title {
+  border-bottom: 1px solid #F2F2F2
+}
+
+.pred-card-title h4 {
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 15px
+}
+
+.pred-card-title .pred-ellipsis {
+  padding: 10px 15px 8px;
+  display: block
+}
+
+.pred-card-title .pred-ellipsis i {
+  color: #B4B4B4;
+  font-size: 24px
+}
+
+.pred-card-title .pred-ellipsis:hover i {
+  color: #666
+}
+
+.pred-card-footer {
+  border-top: 1px solid #E9E9E9;
+  padding: 10px 15px
+}
+
+.pred-card-footer a i {
+  margin-right: 10px
+}
+
+.pred-card-content {
+  padding: 15px
+}
+
+.pred-card-type-solid {
+  background: #558CE3
+}
+
+.pred-card-type-solid * {
+  color: #fff;
+  text-align: center
+}
+
+.pred-card-type-solid .zmdi {
+  font-size: 48px;
+  margin: 30px auto
+}
+
+.pred-card-type-solid h2 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 0 20px
+}
+
+.pred-card-type-solid h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 18px
+}
+
+
+
+/*********************For Cards On Dashboard ***********************/
+.pred-container {
+  padding: 90px 120px
+}
+
+.pred-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+
+.pred-card {
+  width: 380px;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin: 0 20px 20px 0
+}
+
+.pred-card-title, .pred-card-footer {
+  display: flex;
+  align-items: center
+}
+
+.pred-card-title h4, .pred-card-footer a {
+  font-weight: 500
+}
+
+.pred-card-title {
+  border-bottom: 1px solid #F2F2F2
+}
+
+.pred-card-title h4 {
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 15px
+}
+
+.pred-card-title .pred-ellipsis {
+  padding: 10px 15px 8px;
+  display: block
+}
+
+.pred-card-title .pred-ellipsis i {
+  color: #B4B4B4;
+  font-size: 24px
+}
+
+.pred-card-title .pred-ellipsis:hover i {
+  color: #666
+}
+
+.pred-card-footer {
+  border-top: 1px solid #E9E9E9;
+  padding: 10px 15px
+}
+
+.pred-card-footer a i {
+  margin-right: 10px
+}
+
+.pred-card-content {
+  padding: 15px
+}
+
+.pred-card-type-solid {
+  background: #558CE3
+}
+
+.pred-card-type-solid * {
+  color: #fff;
+  text-align: center
+}
+
+.pred-card-type-solid .zmdi {
+  font-size: 48px;
+  margin: 30px auto
+}
+
+.pred-card-type-solid h2 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 0 20px
+}
+
+.pred-card-type-solid h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 18px
+}
+
+/*********************For Cards On Dashboard ***********************/

@@ -1,0 +1,13 @@
+<div class="login-form">
+  <form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h4>PREDICTO</h4>
+    <br>
+    <label>Email address</label><br>
+    <input type="email" formControlName="email" required class="form-control"><br>
+    <label>Password</label><br>
+    <input type="password" formControlName="password" required class="form-control"><br>
+    <button type="submit">
+      <b>Login</b>
+    </button><br>
+  </form>
+</div>

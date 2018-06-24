@@ -1,0 +1,55 @@
+<header>
+  <div class="pred-title-bar">
+    <a href="#" class="pred-link-icon pred-hamburger"> <i class="zmdi zmdi-menu"></i> </a>
+    <h1>Predicto</h1>
+    <div class="pred-top-search">
+      <i class="zmdi zmdi-search"></i> <input type="search" placeholder="Search">
+    </div>
+    <div class="pred-header-controls">
+      <a href="#" class="pred-link-icon pred-notification-control"> <i class="zmdi zmdi-notifications"></i>
+        <span class="pred-badge">15</span> </a> <a href="#" class="pred-link-icon pred-user-control"> <i></i> </a>
+    </div>
+  </div>
+</header>
+
+<nav class="pred-navigation pred-navigation-collapsed">
+  <ul>
+    <li>
+      <a href="#" class="here"> <i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-pin"></i> <span>Locations</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-chart-donut"></i> <span>Data Chart</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-file-text"></i> <span>Reports</span> </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="pred-container pred-card-wrapper">
+  <div>
+    <app-user-info-card></app-user-info-card>
+  </div>
+  <div>
+    <app-all-devices-card></app-all-devices-card>
+  </div>
+  <div>
+    <app-all-locations-card></app-all-locations-card>
+  </div>
+  <div>
+    <app-critical-devices-card></app-critical-devices-card>
+  </div>
+  <div>
+    <app-critical-locations-card></app-critical-locations-card>
+  </div>
+  <div>
+    <app-health-summary-card></app-health-summary-card>
+  </div>
+</div>
+
