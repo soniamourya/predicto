@@ -88,3 +88,21 @@
   font-weight: 400;
   margin: 0 0 18px
 }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-container > div {
+  margin: 10px;
+  text-align: center;
+  line-height: 22px;
+  font-size: 18px;
+  width: 63px;
+  color: #575757;
+}
+.flex-container > div h5{font-size:12px; font-weight: normal;color: #999;text-align: center}
+.mat-card-content h1{font-size:40px; color:#333; text-align: center; padding:15px 0; line-height: 40px; font-weight: normal;}
+.mat-card-header {margin: 0 -24px;display:block}
+.mat-card-header-text,.aa{margin:-25px -8px 0 -8px !important;}
