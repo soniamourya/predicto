@@ -6,8 +6,24 @@
       <i class="zmdi zmdi-search"></i> <input type="search" placeholder="Search">
     </div>
     <div class="pred-header-controls">
-      <a href="#" class="pred-link-icon pred-notification-control"> <i class="zmdi zmdi-notifications"></i>
-        <span class="pred-badge">15</span> </a> <a href="#" class="pred-link-icon pred-user-control"> <i></i> </a>
+      <a class="pred-link-icon pred-notification-control" [matMenuTriggerFor]="notificationMenu">
+        <i class="zmdi zmdi-notifications"></i>
+        <span class="pred-badge">15</span>
+      </a>
+      <mat-menu #notificationMenu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>Notification 1</button>
+        <button mat-menu-item>Notification 2</button>
+        <button mat-menu-item>Notification 3</button>
+      </mat-menu>
+
+      <a class="pred-link-icon pred-user-control" [matMenuTriggerFor]="menu"> <i></i></a>
+
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>Edit Profile</button>
+        <button mat-menu-item>Change Password</button>
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
+
     </div>
   </div>
 </header>
@@ -51,5 +67,9 @@
   <div>
     <app-health-summary-card></app-health-summary-card>
   </div>
+
+  <!--
+	<mat-card>Simple card1</mat-card>
+  -->
 </div>
 

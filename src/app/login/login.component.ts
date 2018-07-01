@@ -1,13 +1,27 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {HttpClient, HttpErrorResponse, HttpParams} from '@angular/common/http';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {HttpClient, HttpClientModule, HttpErrorResponse, HttpParams} from '@angular/common/http';
 import {Location} from '@angular/common';
+import {AppComponent} from '../app.component';
+import {AllLocationsCardComponent} from '../cards/all-locations-card/all-locations-card.component';
+import {MaterialAppModule} from '../ngmaterial.module';
+import {DashboardComponent} from '../dashboard/dashboard.component';
+import {UserInfoCardComponent} from '../cards/user-info-card/user-info-card.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
+import {CriticalDevicesCardComponent} from '../cards/critical-devices-card/critical-devices-card.component';
+import {AppRoutingModule} from '../app-routing.module';
+import {fakeBackendInterceptorService} from '../utilities/fake-backend-interceptor.service';
+import {AllDevicesCardComponent} from '../cards/all-devices-card/all-devices-card.component';
+import {HealthSummaryCardComponent} from '../cards/health-summary-card/health-summary-card.component';
+import {CriticalLocationsCardComponent} from '../cards/critical-locations-card/critical-locations-card.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
@@ -42,7 +56,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    alert('Submitted');
     if (true) {
       const status = null;
       const body = new HttpParams().set('username', this.email.value).set('password', this.password.value);
