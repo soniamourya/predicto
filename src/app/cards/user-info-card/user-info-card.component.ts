@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from "../../services/authService/auth.service";
 
 @Component({
   selector: 'app-user-info-card',
@@ -7,10 +8,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class UserInfoCardComponent implements OnInit {
 
-  userName = 'Kushal';
 
-  constructor() {
-  }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
     console.log('hello');
