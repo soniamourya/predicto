@@ -88,3 +88,7 @@
   font-weight: 400;
   margin: 0 0 18px
 }
+
+
+/**********For Pie Chart Width*************/
+#piechart {width: auto !important;}
