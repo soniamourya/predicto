@@ -15,22 +15,24 @@
 <div class="signin-content">
   <mat-card>
     <mat-card-content>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form #f="ngForm" (ngSubmit)="signIn(f.value)">
         <p>Please login to continue</p>
+        <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
         <mat-form-field class="full-width-input">
-          <input matInput placeholder="User" formControlName="email" required>
+          <input matInput type="email" id="inputEmail" name="email" ngModel class="form-control" placeholder="User" required autofocus>
           <!--<mat-error *ngIf="isFieldInvalid('email')">
             Please inform your user name
           </mat-error>-->
         </mat-form-field>
         <mat-form-field class="full-width-input">
-          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <input matInput type="password" id="inputPassword" name="password" ngModel class="form-control" placeholder="Password" required>
           <!--<mat-error *ngIf="isFieldInvalid('userName')">
             Please inform your password
           </mat-error>-->
         </mat-form-field>
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary" type="submit">Login</button>
       </form>
     </mat-card-content>
   </mat-card>
 </div>
+

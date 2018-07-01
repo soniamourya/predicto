@@ -21,7 +21,7 @@
       <mat-menu #menu="matMenu" [overlapTrigger]="false">
         <button mat-menu-item>Edit Profile</button>
         <button mat-menu-item>Change Password</button>
-        <button mat-menu-item>Logout</button>
+        <button mat-menu-item *ngIf="authService.isLoggedIn()" (click)="authService.logout()" routerLink="/login">Logout</button>
       </mat-menu>
 
     </div>
@@ -48,7 +48,7 @@
   </ul>
 </nav>
 
-<div class="pred-container pred-card-wrapper">
+<div class="pred-container pred-card-wrapper" *ngIf="authService.currentUser.admin">
   <div>
     <app-user-info-card></app-user-info-card>
   </div>

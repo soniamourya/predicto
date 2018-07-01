@@ -1,3 +1,4 @@
+import {AuthService} from "../services/authService/auth.service";
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -9,8 +10,7 @@ export class DashboardComponent implements OnInit {
 
 
 
-  constructor() {
-  }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
