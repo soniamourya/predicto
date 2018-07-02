@@ -1,12 +1,5 @@
 import {Injectable} from '@angular/core';
-import {
-  HTTP_INTERCEPTORS,
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-  HttpResponse
-} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/mergeMap';
@@ -36,8 +29,6 @@ export class FakeBackendInterceptorService implements HttpInterceptor {
         };
         return Observable.of(new HttpResponse({body: body}));
       }
-
-
 
 
       // pass through any requests not handled above

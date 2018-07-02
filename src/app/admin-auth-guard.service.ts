@@ -1,5 +1,5 @@
-import { AuthGuard } from './services/authService/auth-guard.service';
-import { Injectable } from '@angular/core';
+import {AuthGuard} from './services/authService/auth-guard.service';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class AdminAuthGuard extends AuthGuard {

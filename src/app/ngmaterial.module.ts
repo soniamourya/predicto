@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatPaginator, MatToolbarModule} from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/materi
     MatFormFieldModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   exports: [
     MatCardModule,
@@ -19,7 +21,8 @@ import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/materi
     MatFormFieldModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ]
 })
 export class MaterialAppModule {
