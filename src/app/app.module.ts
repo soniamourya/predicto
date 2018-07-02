@@ -1,4 +1,4 @@
-import {AuthHttp, AuthConfig} from 'angular2-jwt/angular2-jwt';
+import {AuthConfig, AuthHttp} from 'angular2-jwt/angular2-jwt';
 import {AdminAuthGuard} from './admin-auth-guard.service';
 import {AuthGuard} from './services/authService/auth-guard.service';
 import {MockBackend} from '@angular/http/testing';
@@ -9,7 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {MaterialAppModule} from './ngmaterial.module';
 
-import {HttpModule, Http, BaseRequestOptions} from '@angular/http';
+import {BaseRequestOptions, Http, HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './/app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
@@ -24,9 +24,10 @@ import {AllLocationsCardComponent} from './cards/all-locations-card/all-location
 import {UserInfoCardComponent} from './cards/user-info-card/user-info-card.component';
 import {AdminComponent} from './admin/admin.component';
 import {NoAccessComponent} from './no-access/no-access.component';
-import {HeaderComponent} from "./header/header.component";
-import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import {HeaderComponent} from './header/header.component';
+import {HomeLayoutComponent} from './layouts/home-layout/home-layout.component';
+import {LoginLayoutComponent} from './layouts/login-layout/login-layout.component';
+import {DevicesListComponent} from './devices-list/devices-list.component';
 
 export function getAuthHttp(http) {
   return new AuthHttp(new AuthConfig({
@@ -49,7 +50,8 @@ export function getAuthHttp(http) {
     NoAccessComponent,
     HeaderComponent,
     HomeLayoutComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    DevicesListComponent
   ],
   imports: [
     BrowserModule,
