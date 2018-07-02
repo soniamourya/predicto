@@ -24,6 +24,9 @@ import {AllLocationsCardComponent} from './cards/all-locations-card/all-location
 import {UserInfoCardComponent} from './cards/user-info-card/user-info-card.component';
 import {AdminComponent} from './admin/admin.component';
 import {NoAccessComponent} from './no-access/no-access.component';
+import {HeaderComponent} from "./header/header.component";
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 export function getAuthHttp(http) {
   return new AuthHttp(new AuthConfig({
@@ -43,7 +46,10 @@ export function getAuthHttp(http) {
     AllDevicesCardComponent,
     AllLocationsCardComponent,
     UserInfoCardComponent,
-    NoAccessComponent
+    NoAccessComponent,
+    HeaderComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserModule,
