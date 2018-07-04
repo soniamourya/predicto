@@ -1,4 +1,4 @@
-import {AuthConfig, AuthHttp} from 'angular2-jwt/angular2-jwt';
+import {AuthHttp, AuthConfig} from 'angular2-jwt/angular2-jwt';
 import {AdminAuthGuard} from './admin-auth-guard.service';
 import {AuthGuard} from './services/authService/auth-guard.service';
 import {MockBackend} from '@angular/http/testing';
@@ -28,6 +28,7 @@ import {HeaderComponent} from './header/header.component';
 import {HomeLayoutComponent} from './layouts/home-layout/home-layout.component';
 import {LoginLayoutComponent} from './layouts/login-layout/login-layout.component';
 import {DevicesListComponent} from './devices-list/devices-list.component';
+import { NotificationListComponent } from './notification-list/notification-list.component';
 
 export function getAuthHttp(http) {
   return new AuthHttp(new AuthConfig({
@@ -51,7 +52,8 @@ export function getAuthHttp(http) {
     HeaderComponent,
     HomeLayoutComponent,
     LoginLayoutComponent,
-    DevicesListComponent
+    DevicesListComponent,
+    NotificationListComponent
   ],
   imports: [
     BrowserModule,
