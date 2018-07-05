@@ -13,13 +13,13 @@ import {NotificationListComponent} from "./notification-list/notification-list.c
 
 const routes: Routes = [
   {
-    path: '',                       // {1}
+    path: '',
     component: HomeLayoutComponent,
-    canActivate: [AuthGuard],       // {2}
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
-        component: DashboardComponent   // {3}
+        component: DashboardComponent
       },
       {
         path: 'admin',
@@ -40,11 +40,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: LoginLayoutComponent, // {4}
+    component: LoginLayoutComponent,
     children: [
       {
         path: 'login',
-        component: LoginComponent   // {5}
+        component: LoginComponent
       }
     ]
   },
@@ -52,7 +52,8 @@ const routes: Routes = [
     path: 'no-access',
     component: NoAccessComponent
   },
-  {path: '**', redirectTo: ''}
+
+  {path: '**', redirectTo: '/login'}
 ];
 
 @NgModule({
