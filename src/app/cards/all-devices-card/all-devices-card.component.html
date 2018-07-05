@@ -7,19 +7,11 @@
   </mat-card-header>
 
   <mat-card-content>
-    <h1>54</h1>
-    <div class="flex-container">
-      <div><h5>Type A</h5>
-        40
-      </div>
-      <div><h5>Type B</h5>
-        30
-      </div>
-      <div><h5>Type C</h5>
-        40
-      </div>
-      <div><h5>Type D</h5>
-        50
+    <h1>{{dataJson.total}}</h1>
+    <div class="flex-container" >
+      <div *ngFor="let info of dataJson.deviceInfo">
+        <h5>{{info.deviceName}}</h5>
+        {{info.deviceData}}
       </div>
     </div>
 

@@ -14,6 +14,7 @@
         <button mat-menu-item>Notification 1</button>
         <button mat-menu-item>Notification 2</button>
         <button mat-menu-item>Notification 3</button>
+        <button mat-menu-item routerLink="/notificationList">See All</button>
       </mat-menu>
 
       <a class="pred-link-icon pred-user-control" [matMenuTriggerFor]="menu"> <i></i></a>
@@ -31,10 +32,18 @@
 <nav class="pred-navigation pred-navigation-collapsed">
   <ul>
     <li>
-      <a href="#" class="here"> <i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+      <!--<nav>
+      <a routerlink="/dashboard"> <i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+      </nav>-->
+      <nav>
+        <a routerLink="/dashboard" class="here"><i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+      </nav>
     </li>
     <li>
-      <a href="#"> <i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>
+      <nav>
+        <a routerLink="/list"><i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>
+      </nav>
+      <!--<a routerlink="/list" ng-reflect-router-link="/list" > <i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>-->
     </li>
     <li>
       <a href="#"> <i class="zmdi zmdi-pin"></i> <span>Locations</span> </a>

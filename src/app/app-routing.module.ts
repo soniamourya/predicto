@@ -9,16 +9,17 @@ import {AuthGuard} from './services/authService/auth-guard.service';
 import {HomeLayoutComponent} from './layouts/home-layout/home-layout.component';
 import {LoginLayoutComponent} from './layouts/login-layout/login-layout.component';
 import {DevicesListComponent} from './devices-list/devices-list.component';
+import {NotificationListComponent} from "./notification-list/notification-list.component";
 
 const routes: Routes = [
   {
-    path: '',                       // {1}
+    path: '',
     component: HomeLayoutComponent,
-    canActivate: [AuthGuard],       // {2}
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
-        component: DashboardComponent   // {3}
+        component: DashboardComponent
       },
       {
         path: 'admin',
@@ -29,16 +30,21 @@ const routes: Routes = [
         path: 'list',
         component: DevicesListComponent,
         canActivate: [AdminAuthGuard]
+      },
+      {
+        path: 'notificationList',
+        component: NotificationListComponent,
+        canActivate: [AdminAuthGuard]
       }
     ]
   },
   {
     path: '',
-    component: LoginLayoutComponent, // {4}
+    component: LoginLayoutComponent,
     children: [
       {
         path: 'login',
-        component: LoginComponent   // {5}
+        component: LoginComponent
       }
     ]
   },
@@ -46,7 +52,8 @@ const routes: Routes = [
     path: 'no-access',
     component: NoAccessComponent
   },
-  {path: '**', redirectTo: ''}
+
+  {path: '**', redirectTo: '/login'}
 ];
 
 @NgModule({
