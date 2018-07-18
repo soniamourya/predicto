@@ -3,6 +3,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -11,7 +13,9 @@ import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/materi
     MatFormFieldModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     MatCardModule,
@@ -19,7 +23,9 @@ import {MatButtonModule, MatInputModule, MatToolbarModule} from '@angular/materi
     MatFormFieldModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialAppModule {

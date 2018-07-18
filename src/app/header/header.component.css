@@ -1,0 +1,32 @@
+.container{position: relative; margin: auto; max-width: 1140px}
+
+.pred-title-bar{width: 100%; display: flex; align-items: center; height: 60px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden; position: fixed; left: 0; top: 0; z-index: 105}
+.pred-title-bar .zmdi{font-size: 24px; color: #707E8D}
+.pred-title-bar h1{color: #404040; font-size: 20px; font-weight: 500; margin-left: 25px; width: 38%; padding-right: 20px}
+.pred-top-search{width: 100%; position: relative}
+.pred-title-bar .pred-top-search i{position: absolute; left: 12px; top: 8px; color: #C4C4C4}
+.pred-top-search input[type=search]{background: #F7F7F7; border-radius: 3px; height: 38px; border: 0; max-width: 580px; padding-left: 30px}
+.pred-header-controls{display: flex; align-items: center}
+.pred-link-icon{display: block; padding: 25px; position: relative}
+.pred-user-control i{display: block; width: 30px; height: 30px; overflow: hidden; border-radius: 50%; background: #ccc}
+.pred-badge{width: 24px; height: 17px; text-align: center; font-weight: 700; color: #fff; position: absolute; top: 18px; font-size: 10px; line-height: 17px; /* Rectangle 2: */
+  background-image: linear-gradient(-180deg, #E25734 0%, #E30C0C 100%);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+  border-radius: 10px;}
+.pred-navigation{padding-top: 60px; width: 250px; min-height: 100vh; background: #4C5062; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50); position: fixed; left: 0; top: 0; z-index: 100}
+.pred-navigation a{display: flex; padding: 25px 20px}
+.pred-navigation a:hover{background: rgba(0,0,0,0.2)}
+.pred-navigation i{display: block; width: 30px; color: #aaa; font-size: 24px; text-align: center}
+.pred-navigation span{display: block; padding-left: 20px; color: #F3F3F3; font-size: 15px; font-weight: 500; line-height: 1.4; margin-top: 3px}
+
+.pred-navigation a.here{position: relative}
+.pred-navigation a.here *{color: #fff}
+.pred-navigation a.here:after{content: ""; width: 6px; height: 6px; background: #FFAE2F; position: absolute; right: 24px; top: 34px; border-radius: 50%}
+
+.pred-navigation-collapsed{width: 70px}
+.pred-navigation-collapsed a{padding: 25px}
+.pred-navigation-collapsed span{display: none}
+.pred-navigation-collapsed a.here:after{right: 14px; top: 26px}
+
+.pred-navigation, .pred-navigation-collapsed{transition: all ease 0.5s}
+

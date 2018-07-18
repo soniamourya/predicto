@@ -1,0 +1,59 @@
+<header>
+  <div class="pred-title-bar">
+    <a href="#" class="pred-link-icon pred-hamburger"> <i class="zmdi zmdi-menu"></i> </a>
+    <h1>Predicto</h1>
+    <div class="pred-top-search">
+      <i class="zmdi zmdi-search"></i> <input type="search" placeholder="Search">
+    </div>
+    <div class="pred-header-controls">
+      <a class="pred-link-icon pred-notification-control" [matMenuTriggerFor]="notificationMenu">
+        <i class="zmdi zmdi-notifications"></i>
+        <span class="pred-badge">15</span>
+      </a>
+      <mat-menu #notificationMenu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>Notification 1</button>
+        <button mat-menu-item>Notification 2</button>
+        <button mat-menu-item>Notification 3</button>
+        <button mat-menu-item routerLink="/notificationList">See All</button>
+      </mat-menu>
+
+      <a class="pred-link-icon pred-user-control" [matMenuTriggerFor]="menu"> <i></i></a>
+
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>Edit Profile</button>
+        <button mat-menu-item>Change Password</button>
+        <button mat-menu-item (click)="authService.logout()" routerLink="/login">Logout</button>
+      </mat-menu>
+
+    </div>
+  </div>
+</header>
+
+<nav class="pred-navigation pred-navigation-collapsed">
+  <ul>
+    <li>
+      <!--<nav>
+      <a routerlink="/dashboard"> <i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+      </nav>-->
+      <nav>
+        <a routerLink="/dashboard" class="here"><i class="zmdi zmdi-view-module"></i> <span>Dashboard</span> </a>
+      </nav>
+    </li>
+    <li>
+      <nav>
+        <a routerLink="/list"><i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>
+      </nav>
+      <!--<a routerlink="/list" ng-reflect-router-link="/list" > <i class="zmdi zmdi-input-composite"></i> <span>Devices</span> </a>-->
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-pin"></i> <span>Locations</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-chart-donut"></i> <span>Data Chart</span> </a>
+    </li>
+    <li>
+      <a href="#"> <i class="zmdi zmdi-file-text"></i> <span>Reports</span> </a>
+    </li>
+  </ul>
+</nav>
+

@@ -8,16 +8,10 @@
   <mat-card-content>
     <h1>54</h1>
     <div class="flex-container">
-      <div>
-        <h5>Type A</h5>
-        40
+      <div *ngFor="let info of data">
+        <h5>{{info.name}}</h5>
+        {{info.id}}
       </div>
-      <div><h5>Type B</h5>
-        30</div>
-      <div><h5>Type C</h5>
-        40</div>
-      <div><h5>Type D</h5>
-        50</div>
     </div>
 
   </mat-card-content>
